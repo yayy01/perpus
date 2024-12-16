@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <!-- Load Boxicons Once -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+        /* Inline CSS untuk pengaturan logo */
+        .logo-image {
+            width: 80px; /* Ubah ukuran sesuai keinginan */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo madrasah" class="logo-image">
+            <h1 class="logo-title">Perpustakaan</h1>
+            <span class="logo-subtitle">MTs MMH</span>
+        </div>
+        <div class="content">
+            <ul class="menu">
+                <li><a href="login/login-choice.html" class="menu-item"><i class='bx bx-library'></i> Library</a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-store'></i> Isi Sendiri</a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-store'></i> Isi Sendiri</a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-store'></i> Isi Sendiri</a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-calendar-event'></i> Event</a></li>
+            </ul>
+            <select class="pilih" onchange="navigateToPage(this)">
+                <option value="" disabled selected>Bank Soal</option>
+                <option value="sejarah.html">Sejarah</option>
+                <option value="matematika.html">Matematika</option>
+                <option value="sastra.html">Sastra</option>
+                <option value="sains.html">Sains</option>
+                <option value="teknologi.html">Teknologi</option>
+                <option value="bahasa.html">Bahasa</option>
+            </select>
+        </div>
+    </nav>
+    <section class="welcome-section">
+        <!-- Header -->
+        <header class="welcome-header">
+            <h1>Selamat Datang di Perpustakaan MTs Matholi'ul Huda</h1>
+        </header>
+    
+        <!-- Article -->
+        <article class="welcome-article">
+            <p>
+                Perpustakaan MTs Matholi'ul Huda adalah pusat informasi dan pembelajaran yang menyediakan berbagai jenis buku untuk mendukung proses belajar siswa di sekolah. 
+                Kami memiliki koleksi buku yang beragam, mulai dari buku pelajaran, novel, ensiklopedia, hingga buku agama.
+            </p>
+            <p>
+                Dengan suasana yang nyaman dan fasilitas modern, perpustakaan ini berkomitmen untuk menjadi sumber inspirasi dan pengetahuan bagi semua pengunjung. Kami juga mengadakan berbagai event literasi, seperti bedah buku dan workshop menulis.
+            </p>
+    
+            <!-- Carousel -->
+            <figure class="carousel-container" id="carousel">
+                <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel">
+                    <img src="images/library1.jpg" alt="Foto Perpustakaan 1" class="carousel-image">
+                    <img src="images/library2.jpg" alt="Foto Perpustakaan 2" class="carousel-image">
+                    <img src="images/library3.jpg" alt="Foto Perpustakaan 3" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+
+                <figcaption>Foto interior perpustakaan kami.</figcaption>
+            </figure>
+            
+        </article>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Perpustakaan MTs Matholi'ul Huda. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+    

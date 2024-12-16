@@ -1,0 +1,168 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f1f1f1;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    max-width: 120px;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.dropdown-menu li {
+    margin: 10px 0;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: #007bff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.alert {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert span {
+    font-weight: bold;
+}
+
+.sign-out {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sign-out:hover {
+    background-color: #c82333;
+}
+
+/* Content Styles */
+.mt-5 {
+    margin-top: 80px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    font-size: 24px;
+    color: #888;
+}
+
+/* Card Styles */
+.cardImg {
+    width: 47%; /* Lebar card sedikit lebih kecil agar lebih rapat */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardImg img {
+    width: 87%; /* Membuat gambar mengisi penuh lebar card */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardImg img:hover {
+    transform: scale(1.05);
+}
+
+/* Flexbox Layout for Card Container */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Gunakan space-between agar jarak antar card seragam */
+    gap: 10px; /* Mengurangi gap antar card untuk hasil lebih rapat */
+    max-width: 1280px; /* Menetapkan lebar maksimal container */
+    margin: 0 auto; /* Membuat container berada di tengah */
+}
+
+/* Member dan Buku card - memastikan konsistensi jarak antar kiri dan kanan */
+.cardImg:nth-child(1), .cardImg:nth-child(2) {
+    padding: 0 10px; /* Mengurangi padding untuk card pertama dan kedua */
+}
+
+/* Card Denda tetap di tengah */
+.cardImg.denda-card {
+    width: 100%; /* Card "Denda" tetap mengambil seluruh lebar baris */
+    display: flex;
+    justify-content: center; /* Memastikan gambar "Denda" di tengah */
+    text-align: center;
+}
+
+.cardImg.denda-card img {
+    width: 70%; /* Gambar Denda 70% */
+}
+
+/* Responsiveness untuk tampilan lebih kecil */
+@media (max-width: 768px) {
+    .cardImg {
+        width: 100%; /* Card mengambil seluruh lebar di perangkat kecil */
+    }
+
+    .cardImg.denda-card img {
+        width: 80%; /* Gambar "Denda" lebih besar pada perangkat kecil */
+    }
+}

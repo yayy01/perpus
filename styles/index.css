@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(191, 191, 191); /* Latar belakang seluruh halaman */
+}
+
+/* Main section */
+section {
+    margin-left: 250px; /* Menjaga agar section tidak tertutup sidebar */
+    padding: 20px;
+    background-color: rgb(248, 248, 248); /* Latar belakang section */
+    box-sizing: border-box;
+    flex-grow: 1; /* Membuat section mengisi sisa ruang */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    background-color: #f3f5f9;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo-image {
+    width: 50px; /* Ukuran logo */
+    height: auto;
+    margin-bottom: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f58c7;
+    margin-bottom: 5px; /* Jarak antara "Perpustakaan" dan "MTs MMH" */
+}
+
+.logo-subtitle {
+    font-size: 18px;
+    color: #555; /* Warna teks yang lebih lembut */
+}
+
+/* SECTION STYLING */
+section {
+    width: calc(100% - 250px); /* Sesuaikan dengan lebar sidebar */
+    margin-left: 250px; /* Pastikan tidak tumpang tindih dengan sidebar */
+    overflow-x: hidden; /* Hilangkan kemungkinan scroll horizontal */
+    padding: 20px; /* Tambahkan ruang untuk konten */
+    background-color: #f9f9f9; /* Warna latar belakang netral */
+    min-height: 100vh; /* Pastikan section mengisi layar penuh */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan ke dalam */
+}
+
+/* WELCOME HEADER */
+.welcome-header h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #1f58c7;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* WELCOME ARTICLE */
+.welcome-article p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+/* CONTAINER UTAMA CAROUSEL */
+.carousel-container {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Batasi lebar carousel */
+    margin: 0 auto; /* Pusatkan carousel di halaman */
+}
+
+/* WRAPPER UNTUK SLIDES */
+.carousel {
+    display: flex;
+    transition: none;
+    width: 300%; /* Lebar total untuk semua slide */
+    justify-content: flex-start;
+}
+
+/* GAMBAR LANDSCAPE SERAGAM DAN RAPI */
+.carousel-image {
+    width: 100%; /* Gunakan penuh lebar slide */
+    height: 400px; /* Tambahkan tinggi gambar, sebelumnya 300px */
+    object-fit: cover; /* Tetap menjaga proporsi tanpa distorsi */
+    background-color: #f0f0f0; /* Latar belakang untuk area kosong */
+    display: block;
+}
+
+
+/* NAVIGASI SLIDE BUTTON */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* CAPTION DI BAWAH GAMBAR */
+.carousel-container figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+}
+
+/* Menu styles */
+.menu, .apps-menu {
+    list-style-type: none;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 13px 15px;
+    color: #555;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #e0e6ed;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: #e0e6ed;
+}
+
+/* Dropdown (Pilih Kategori) */
+.pilih {
+    width: 100%;
+    padding: 10px;
+    background-color: #f3f5f9;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Apps Section */
+.apps-section {
+    margin-top: 20px;
+}
+
+.apps-section h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.apps-menu .menu-item {
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo span {
+        font-size: 18px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .menu-item {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .pilih {
+        font-size: 14px;
+    }
+
+    .apps-section h4 {
+        font-size: 14px;
+    }
+
+    .apps-menu .menu-item {
+        font-size: 12px;
+    }
+}
+
+footer {
+    background-color: #1f58c7; /* Latar footer */
+    color: #fff; /* Warna teks footer */
+    text-align: center; /* Teks footer rata tengah */
+    padding: 10px 20px; /* Jarak dalam footer */
+    font-size: 14px; /* Ukuran font footer */
+    position: relative; /* Posisi footer relatif ke konten */
+    margin-left: 250px; /* Geser footer ke kanan sebesar lebar sidebar */
+    width: calc(100% - 250px); /* Lebar footer mengikuti sisa layar setelah sidebar */
+    box-sizing: border-box; /* Memastikan padding masuk ke dalam width */
+    z-index: 5; /* Supaya footer tetap terlihat di atas */
+}
